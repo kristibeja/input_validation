@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="validationForm">
+        <h1>Enter your Birth Date:</h1>
+        <input type="text" placeholder="mm/dd/yyyy" id="date" required>
+        <button onclick="onClick()">Check validation</button>
+        <div>
+            <p id="message"></p>
+            <p class="invalid"></p>
+         </div>
+
+         
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
