@@ -34,9 +34,16 @@ h1{
 }
 
 #message{
-    color: #FF5964;
     font-family: 'Noto Serif', serif;
     font-size: 20px;
     font-weight: bold;
 
+}
+
+.error-msg{
+    color: #FF5964;
+}
+
+.success-msg{
+    color: #33aa39;
 }

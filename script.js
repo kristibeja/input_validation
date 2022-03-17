@@ -19,12 +19,18 @@ function onClick(){
 function formatValidation(dateCheck){ 
 
     if(dateCheck === ""){
+
+        document.getElementById("message").classList.remove("success-msg");
+        document.getElementById("message").classList.add("error-msg");
         document.getElementById("message").innerHTML = "Please fill the form";
-    }else if (date_regex.test(dateCheck)) {
+    }
+    else if (date_regex.test(dateCheck)) {
             document.getElementById("message").innerHTML = "Your date is correct";
             ageValidation(dateCheck);
         }
         else{
+          document.getElementById("message").classList.remove("success-msg");
+          document.getElementById("message").classList.add("error-msg");
           document.getElementById("message").innerHTML = "Invalid date format.";
         }
     
@@ -41,9 +47,14 @@ function ageValidation(dateCheck){
     let sum = daysOfMonth + days + daysOfYear;
 
     if( (nr_ofdays_today - sum)/365 >= 18 ){
+        document.getElementById("message").classList.remove("error-msg");
+        document.getElementById("message").classList.add("success-msg");
         document.getElementById("message").innerHTML = "Access Allowed";
+
     }
     else{
+        document.getElementById("message").classList.remove("success-msg");
+        document.getElementById("message").classList.add("error-msg");
         document.getElementById("message").innerHTML = "Access Denied. Must be over 18 years of age."
     }
 }
